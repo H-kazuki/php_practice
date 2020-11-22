@@ -17,8 +17,8 @@
 			<?php $category_menu[] = $menu ?>
 		<?php endif ?>
 	<?php endforeach ?>
-	<div class="container">
-		<div class="confirm_container">
+	<div class="wrapper">
+		<div class="container">
 			<?php foreach($category_menu as $menu): ?>
 				<?php if($_POST[$menu->getCode()] > 0): ?>
 					<div class="choose">
@@ -31,20 +31,20 @@
 			<?php if($count == 0): ?>
 				<h1>メニューが選択されていません。</h1>
 				<form action="show.php?id=<?php echo $category ?>" method="POST">
-					<div class="return_button">
-						<button type="submit" name="return" class="return">もどる</button>
+					<div class="button">
+						<button type="submit" name="return" class="return_btn">もどる</button>
 					</div>
 				</form>
 			<?php else: ?>
 				<h1 class="total_count">以上<span><?php echo $count ?></span>品</h1>
 				<form action="sumple.php" method="POST">
-					<div class="confirm_button">
-						<button type="submit" name="confirm" class="confirm">注文する</button>
+					<div class="button">
+						<button type="submit" name="confirm" class="confirm_btn">注文する</button>
 					</div>
 				</form>
-				<div class="return_button">
+				<div class="button">
 					<a href="show.php?id=<?php echo $category ?>" style="text-decoration:none;">
-						<button class="return">もどる</button>
+						<button type="submit" class="return_btn">もどる</button>
 					</a>
 				</div>
 			<?php endif ?>

@@ -12,12 +12,14 @@
 
 <body>
 	<header>
-		<a href="sumple.php" style="text-decoration:none;">
-			<button class="top_button">TOP</button>
-		</a>
+		<div class="button">
+			<a href="sumple.php" style="text-decoration:none;">
+				<button class="top_btn">TOP</button>
+			</a>
+		</div>
 	</header>
-	<div class="container">
-		<div class="menu_container">
+	<div class="wrapper">
+		<div class="container">
 			<?php $category = $_GET['id'] ?>
 			<form action="confirm.php?id=<?php echo $category ?>" method="POST">
 				<?php foreach($menus as $menu): ?>
@@ -26,7 +28,7 @@
 							<div class="menu_name">
 								<h2><?php echo $menu->getName() ?></h2>
 							</div>
-							<div class="menu_count_form">
+							<div class="count_form">
 								<input type="number" value="0" name="<?php echo $menu->getCode() ?>" min="0" max="10" class="menu_count">
 							</div>
 							<div class="menu_price">
@@ -36,8 +38,8 @@
 					<?php endif ?>
 				<?php endforeach ?>
 				<p>※値段はすべて税込みで表示しています。</p>
-				<div class="order_container">
-					<button type="submit" class="order_button">注文確認</button>
+				<div class="button">
+					<button type="submit" class="order_btn">注文確認</button>
 				</div>
 			</form>
 		</div>

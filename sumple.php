@@ -15,28 +15,25 @@
 	<header>
 		<?php if(isset($_POST['confirm'])): ?>
 			<div class="message_container">
-				<h1 class="message_text">ご注文承りました</h1>
+				<h1>ご注文承りました</h1>
 				<?php unset($_POST['confirm']);?>
 			</div>
 		<?php endif ?>
-	</header>
-	<div class="container">
-		<div class="title_container">
-			<h1 class="title">Menu.</h1>
+		<div class="title">
+			<h1>Menu.</h1>
 		</div>
-		<div class="menu_cont">
-			<?php foreach($categorys as $category): ?>
-				<div class="category_item">
+	</header>
+	<div class="wrapper">
+		<?php foreach($categorys as $category): ?>
+			<div class="container">
+				<div class="item">
 					<a href="show.php?id=<?php echo $category->getId() ?>">
 						<img src="static/<?php echo $category->getImage() ?>">
 					</a>
-					<h3 class="category_name"><?php echo $category->getName() ?></h3>
+					<h3><?php echo $category->getName() ?></h3>
 				</div>
-			<?php endforeach ?>
-		</div>
+			</div>
+		<?php endforeach ?>
 	</div>
 </body>
-<footer>
-	
-</footer>
 </html>
