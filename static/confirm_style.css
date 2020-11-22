@@ -5,21 +5,21 @@ body {
 	background-size: cover;
 }
 
-.container {
-	padding: 30px 0 30px 0;
+.wrapper {
+	padding: 20px 0 20px;
 }
 
-.confirm_container {
+.container {
 	width: 500px;
-	padding: 10px 20px 10px 20px;
+	padding: 10px;
 	border-radius: 2px;
-	margin: 0 auto;
 	background: rgba(255,255,255,0.9);
+	margin: 0 auto;
 	box-shadow: 2px 2px 5px black;
 }
 
 .choose {
-	padding: 5px 0;
+	margin-bottom: 5px;
 }
 
 .menu_name {
@@ -40,8 +40,8 @@ body {
 
 h1 {
 	text-align: center;
-	padding: 15px 0 0 0;
-	margin: 0;
+	padding-top: 15px; 
+	margin:0;
 }
 
 .total_count {
@@ -49,53 +49,44 @@ h1 {
 	border-color: gray;
 }
 
-.return_button,
-.confirm_button {
-	width: 100%;
-	text-align: center;
+.button {
+	width: 200px;
+	background-color: #FFF;
 	padding: 0;
-	margin: 10px 0;
+	margin: 5px auto;
+	border-radius: 5px;
 }
 
-.confirm {
+button{
 	width: 200px;
 	height: 70px;
 	font-size: 30px;
-	color: #FFF;
-	background-color: #75A9FF;
 	padding: 10px 30px;
 	border-radius: 5px;
 }
 
-.confirm:hover {
-	background-color: #4689FF;
+.confirm_btn {
+	color: #FFF;
+	background-color: #1E90FF;
+	opacity: 0.8;
 }
 
-.return {
-	width: 200px;
-	height: 70px;
-	font-size: 30px;
+.confirm_btn:hover {
+	opacity: 1.0;
+}
+
+.return_btn {
 	color: #999999;
 	background-color: #FFF;
-	padding: 10px 30px;
 	border: solid 2px;
 	border-color: #999999;
-	border-radius: 5px;
 }
 
-.return:hover {
+.return_btn:hover {
 	color: #FF8856;
-	background-color: #FFF;
-	border: solid 2px;
 	border-color: #FF8856;
 }
 
 span {
 	color: red;
-}
-
-.return_button {
-	width: 100%;
-	text-align: center;
-	margin: 20px 0;
 }
